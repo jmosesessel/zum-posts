@@ -1,6 +1,6 @@
-<section>
+﻿<section class="container">
   <header>
-
+    <button class="btn btn-primary">Hello</button>
   </header>
   <main>
     <!-- Filter Area -->
@@ -8,8 +8,8 @@
 
     </section>
     <!-- Result Section -->
-    <section *ngIf="posts">
-      <div class="result-box" *ngFor="let post of posts">
+    <section class="row" *ngIf="posts">
+      <div class="col4" class="result-box" *ngFor="let post of posts">
         <h2>{{post.author}}</h2>
       </div>
     </section>
