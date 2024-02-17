@@ -7,7 +7,7 @@ import { Post } from './post';
   providedIn: 'root'
 })
 export class ApiService {
-  private apiUrl = 'https://localhost:7037/api/Posts'; 
+  private apiBaseUrl = 'https://localhost:7037/api'; 
 
   constructor(private http: HttpClient) {
     console.log('http', http.request)
@@ -15,7 +15,7 @@ export class ApiService {
 
   // function to get all posts filtered by the tag input from the users
   getPosts(tag: string): Observable<Post[]> {
-    const posts = this.http.get<Post[]>(`${this.apiUrl}/${tag}`);
+    const posts = this.http.get<Post[]>(`${this.apiBaseUrl}/posts/${tag}`);
     console.log('posts', posts)
     return posts
   }
