@@ -1,0 +1,23 @@
+{
+  "Version": 1,
+  "Hash": "rCPfBojsQxKanNwEiDJzwvdTmudHg+XLTyurOVPvEfs=",
+  "Source": "ZumPostApp.Server",
+  "BasePath": "_content/ZumPostApp.Server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\Users\\charl\\source\\repos\\zum-posts\\ZumPostApp\\zumpostapp.client\\zumpostapp.client.esproj",
+      "Version": 2,
+      "Source": "zumpostapp.client",
+      "GetPublishAssetsTargets": "GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained"
+    }
+  ],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
