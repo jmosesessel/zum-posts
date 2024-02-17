@@ -16,6 +16,7 @@ interface WeatherForecast {
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
+
 export class AppComponent implements OnInit {
   public forecasts: WeatherForecast[] = [];
   public posts: Post[] = [];
@@ -23,26 +24,22 @@ export class AppComponent implements OnInit {
   constructor(private http: HttpClient, private apiService: ApiService) {}
 
   ngOnInit() {
-    this.getForecasts();
+    //this.getForecasts();
     this.getPost('tech');
   }
 
-  getForecasts() {
-    this.http.get<WeatherForecast[]>('/weatherforecast').subscribe(
-      (result) => {
-        this.forecasts = result;
-      },
-      (error) => {
+
+  getPost(tag: string, sortBy?: string, direction?: string): void {
+    this.apiService.getPosts(tag, sortBy, direction).subscribe(
+      posts => {
+        this.posts = posts;
+      console.log('posts...', this.posts)
+
+      }, error => {
         console.error(error);
       }
-    );
-  }
 
-  getPost(tag: string): void {
-    this.apiService.getPosts(tag).subscribe(posts => {
-      console.log('posts...', posts)
-      this.posts = posts;
-    });
+    );
 
     //this.http.get<Post[]>(`/api/posts/${tag}`).subscribe(
     //  (result) => {

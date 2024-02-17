@@ -19,9 +19,9 @@ namespace ZumPostApp.Server.Controllers
         }
 
         [HttpGet("{tag}")]
-        public async Task<IActionResult> GetTag(string tag)
+        public async Task<IActionResult> GetTag(string tag, string sortBy = null, string direction = null)
         {
-            var posts = await _postRepository.GetPostsAsync(tag);
+            var posts = await _postRepository.GetPostsAsync(tag, sortBy, direction);
 
             if (posts == null)
                 return NotFound();
@@ -43,7 +43,7 @@ namespace ZumPostApp.Server.Controllers
 
     public interface IPostRepository
     {
-        Task<List<Post>> GetPostsAsync(string tag);
+        Task<List<Post>> GetPostsAsync(string tag, string sortBy, string direction);
     }
 
     public class ThirdPartyApiRepo : IPostRepository
@@ -57,19 +57,48 @@ namespace ZumPostApp.Server.Controllers
         }
 
 
-        public async Task<List<Post>> GetPostsAsync(string tag)
+        public async Task<List<Post>> GetPostsAsync(string tag, string sortBy, string direction)
         {
+            // set default value for sortBy = id, direction = asc 
+
             var apiURL = $"{_httpClient.BaseAddress}?tag={tag}";
 
             var response = await _httpClient.GetAsync(apiURL);
-
+            sortBy = string.IsNullOrEmpty(sortBy) ? sortBy = "id" : sortBy;
+            direction = string.IsNullOrEmpty(direction) ? direction = "asc" : direction;
             if (response.IsSuccessStatusCode)
             {
                 var responseContent = await response.Content.ReadAsStringAsync();
-                var posts = JsonConvert.DeserializeObject<FilteredPosts>(responseContent);
+                var posts = JsonConvert.DeserializeObject<FilteredPosts>(responseContent)?.Posts;
+                
+                // sort result posts by direction and 
+                // Determine sorting order
+                bool descending =  direction.Equals("desc", StringComparison.OrdinalIgnoreCase);
 
-                if (posts != null && posts.Posts != null)
-                    return posts.Posts;
+                // Sort posts based on user-selected property
+                switch (sortBy.ToLower())
+                {
+                    case "id":
+                        posts = descending ? posts?.OrderByDescending(p => p.Id).ToList() : posts?.OrderBy(p => p.Id).ToList();
+                        break;
+                    case "reads":
+                        posts = descending ? posts?.OrderByDescending(p => p.Reads).ToList() : posts?.OrderBy(p => p.Reads).ToList();
+                        break;
+                    case "likes":
+                        posts = descending ? posts?.OrderByDescending(p => p.Likes).ToList() : posts?.OrderBy(p => p.Likes).ToList();
+                        break;
+                    case "popularity":
+                        posts = descending ? posts?.OrderByDescending(p => p.Popularity).ToList() : posts?.OrderBy(p => p.Popularity).ToList();
+                        break;
+                    default:
+                        // If invalid sortBy value is provided, return original list
+                        Console.WriteLine("Invalid sortBy value provided. Sorting by ID.");
+                        posts = posts?.OrderBy(p => p.Id).ToList();
+                        break;
+                }
+
+                if (posts != null)
+                    return posts;
             }
 
             return null;

@@ -1,4 +1,24 @@
-﻿<h1 id="tableLabel">Weather forecast</h1>
+<section>
+  <header>
+
+  </header>
+  <main>
+    <!-- Filter Area -->
+    <section class="filter-area">
+
+    </section>
+    <!-- Result Section -->
+    <section *ngIf="posts">
+      <div class="result-box" *ngFor="let post of posts">
+        <h2>{{post.author}}</h2>
+      </div>
+    </section>
+  </main>
+  
+</section>
+
+
+<!--<h1 id="tableLabel">Weather forecast</h1>
 
 <p>This component demonstrates fetching data from the server.</p>
 
@@ -21,4 +41,4 @@
             <td>{{ forecast.summary }}</td>
         </tr>
     </tbody>
-</table>
+</table>-->
