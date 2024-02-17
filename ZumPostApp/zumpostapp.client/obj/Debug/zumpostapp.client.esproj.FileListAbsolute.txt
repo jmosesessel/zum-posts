@@ -1,1 +1,3 @@
 C:\Users\charl\source\repos\zum-posts\ZumPostApp\zumpostapp.client\obj\Debug\zumpostapp.client.esproj.CoreCompileInputs.cache
+C:\Users\tinos\source\repos\WebApplication1\zum-posts\ZumPostApp\zumpostapp.client\obj\Debug\zumpostapp.client.esproj.CoreCompileInputs.cache
+C:\Users\tinos\source\repos\zum-posts\ZumPostApp\zumpostapp.client\obj\Debug\zumpostapp.client.esproj.CoreCompileInputs.cache

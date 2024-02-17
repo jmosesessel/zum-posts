@@ -1,13 +1,13 @@
 {
   "Version": 1,
-  "Hash": "rCPfBojsQxKanNwEiDJzwvdTmudHg+XLTyurOVPvEfs=",
+  "Hash": "90zW9THNIj1GmgM+fxqAGpJBE+wpnODaoJzdi0VpUEc=",
   "Source": "ZumPostApp.Server",
   "BasePath": "_content/ZumPostApp.Server",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [
     {
-      "Identity": "C:\\Users\\charl\\source\\repos\\zum-posts\\ZumPostApp\\zumpostapp.client\\zumpostapp.client.esproj",
+      "Identity": "C:\\Users\\tinos\\source\\repos\\zum-posts\\ZumPostApp\\zumpostapp.client\\zumpostapp.client.esproj",
       "Version": 2,
       "Source": "zumpostapp.client",
       "GetPublishAssetsTargets": "GetCurrentProjectPublishStaticWebAssetItems",

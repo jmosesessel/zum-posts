@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ZumPostApp.Server")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e643c0dfd9336117b5edd573ea732cad663edf27")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e2e3784dd43c6998251a25ee704c9e74767411af")]
 [assembly: System.Reflection.AssemblyProductAttribute("ZumPostApp.Server")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ZumPostApp.Server")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

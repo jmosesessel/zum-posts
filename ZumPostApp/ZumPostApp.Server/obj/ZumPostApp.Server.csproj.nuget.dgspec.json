@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\charl\\source\\repos\\zum-posts\\ZumPostApp\\ZumPostApp.Server\\ZumPostApp.Server.csproj": {}
+    "C:\\Users\\tinos\\source\\repos\\zum-posts\\ZumPostApp\\ZumPostApp.Server\\ZumPostApp.Server.csproj": {}
   },
   "projects": {
-    "C:\\Users\\charl\\source\\repos\\zum-posts\\ZumPostApp\\ZumPostApp.Server\\ZumPostApp.Server.csproj": {
+    "C:\\Users\\tinos\\source\\repos\\zum-posts\\ZumPostApp\\ZumPostApp.Server\\ZumPostApp.Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\charl\\source\\repos\\zum-posts\\ZumPostApp\\ZumPostApp.Server\\ZumPostApp.Server.csproj",
+        "projectUniqueName": "C:\\Users\\tinos\\source\\repos\\zum-posts\\ZumPostApp\\ZumPostApp.Server\\ZumPostApp.Server.csproj",
         "projectName": "ZumPostApp.Server",
-        "projectPath": "C:\\Users\\charl\\source\\repos\\zum-posts\\ZumPostApp\\ZumPostApp.Server\\ZumPostApp.Server.csproj",
-        "packagesPath": "C:\\Users\\charl\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\charl\\source\\repos\\zum-posts\\ZumPostApp\\ZumPostApp.Server\\obj\\",
+        "projectPath": "C:\\Users\\tinos\\source\\repos\\zum-posts\\ZumPostApp\\ZumPostApp.Server\\ZumPostApp.Server.csproj",
+        "packagesPath": "C:\\Users\\tinos\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tinos\\source\\repos\\zum-posts\\ZumPostApp\\ZumPostApp.Server\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\charl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\tinos\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

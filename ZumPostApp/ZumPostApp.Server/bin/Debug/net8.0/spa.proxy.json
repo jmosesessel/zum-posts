@@ -3,7 +3,7 @@
 "ServerUrl": "https://localhost:4200",
 "RedirectUrl": "",
 "LaunchCommand": "npm start",
-"WorkingDirectory": "C:\\Users\\charl\\source\\repos\\zum-posts\\ZumPostApp\\ZumPostApp.Server\\..\\zumpostapp.client",
+"WorkingDirectory": "C:\\Users\\tinos\\source\\repos\\zum-posts\\ZumPostApp\\ZumPostApp.Server\\..\\zumpostapp.client",
 "MaxTimeoutInSeconds": "120",
 "KeepRunning": "false"
 }
