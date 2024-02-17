@@ -10,7 +10,14 @@ const PROXY_CONFIG = [
     ],
     target,
     secure: false
-  }
+  },
+  //{
+  //  context: [
+  //    "https://localhost:7037/api/posts",
+  //  ],
+  //  target,
+  //  secure: false
+  //}
 ]
 
 module.exports = PROXY_CONFIG;

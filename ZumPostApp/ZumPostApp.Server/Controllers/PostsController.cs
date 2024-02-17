@@ -18,7 +18,7 @@ namespace ZumPostApp.Server.Controllers
             _postRepository = postRepository;
         }
 
-        [HttpPost("{tag}")]
+        [HttpGet("{tag}")]
         public async Task<IActionResult> GetTag(string tag)
         {
             var posts = await _postRepository.GetPostsAsync(tag);

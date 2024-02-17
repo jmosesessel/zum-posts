@@ -12,6 +12,16 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddHttpClient<ThirdPartyApiRepo>();
 builder.Services.AddScoped<IPostRepository, ThirdPartyApiRepo>();
 
+// Configure CORS policies
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowSpecificOrigin", builder =>
+    {
+        builder.WithOrigins("https://localhost:4200", "http://localhost:4200") // Replace with your Angular app URL
+               .AllowAnyHeader()
+               .AllowAnyMethod();
+    });
+});
 
 var app = builder.Build();
 
@@ -27,7 +37,11 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+// Enable CORS
+app.UseCors("AllowSpecificOrigin");
+
 app.UseAuthorization();
+
 
 app.MapControllers();
 
