@@ -29,6 +29,14 @@ export class AppComponent implements OnInit {
 
   handleFormData():void{
     console.log('selectedSortBy', this.selectedSortBy)
+
+    // get the values of the form and call the getPost to filter the results
+    const tag:string = this.selectedTag.toLowerCase()
+    const sortBy:string = this.selectedSortBy.toLowerCase()
+    const direction: string = this.selectedDirection.toLowerCase()
+
+    // call getPost function
+    this.getPost(tag, sortBy, direction)
   }
 
   getPost(tag: string, sortBy?: string, direction?: string): void {
@@ -43,15 +51,6 @@ export class AppComponent implements OnInit {
 
     );
 
-    //this.http.get<Post[]>(`/api/posts/${tag}`).subscribe(
-    //  (result) => {
-    //    console.log('post result', result)
-    //    this.posts = result;
-    //  },
-    //  (error) => {
-    //    console.error(error);
-    //  }
-    //);
   }
 
   title = 'zumpostapp.client';
