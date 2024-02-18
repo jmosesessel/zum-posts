@@ -10,7 +10,7 @@ Angular 17
 Bootstrap 5
 
 ## What I learnt
-I learned Angular in just about 2 days to come up with the design on the frontend and the architecture as well as the Angular ecosystem.
+With determination, I was able to learn Angular in just about 2 days to come up with the design on the frontend and the architecture as well as the Angular ecosystem. I am so proud I did.
 
 ## Design Image
 
