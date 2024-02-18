@@ -8,3 +8,6 @@
 .box-icons {
     width: 2rem;
 }
+.underline-text{
+    text-decoration: 2px underline red;
+}

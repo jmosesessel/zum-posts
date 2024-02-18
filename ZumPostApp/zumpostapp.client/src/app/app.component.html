@@ -50,7 +50,7 @@
       <div class="result-box card border border-info col-3 p-4 shadow-sm" *ngFor="let post of posts">
         <div class="row mb-3">
           <div class="d-flex gap-4 col-12 align-items-center">
-            <span class="d-block text-center p-1 rounded bg-danger-subtle">ID: {{post.id}}</span>
+            <span class="d-block text-center p-1 rounded bg-danger-subtle" [ngClass]="selectedSortBy.toLowerCase() == 'id' ? 'underline-text' : ''">ID: {{post.id}}</span>
             <img class="box-icons text-lg" src="../assets/icons8-author-50.png" alt="">
             <!-- </div>
           <div class="col-10 justify-content-center align-items-center"> -->
@@ -62,7 +62,7 @@
             <div class="row justify-content-center align-items-center">
               <div class="col-12">
                 <img class="box-icons text-lg" title="reads" src="../assets/icons8-read-50.png" alt="">
-                <p>{{post.reads}}</p>
+                <p [ngClass]="selectedSortBy.toLowerCase() == 'reads' ? 'underline-text' : ''">{{post.reads}}</p>
               </div>
             </div>
           </div>
@@ -70,7 +70,7 @@
             <div class="row justify-content-center align-items-center">
               <div class="col-12 text-center">
                 <img class="box-icons text-lg" title="likes" src="../assets/icons8-like-50.png" alt="">
-                <p>{{post.likes}}</p>
+                <p [ngClass]="selectedSortBy.toLowerCase() == 'likes' ? 'underline-text' : ''">{{post.likes}}</p>
               </div>
             </div>
           </div>
@@ -79,7 +79,7 @@
               <div class="col-12 text-end">
                 <img class="box-icons text-lg" title="popularity" src="../assets/icons8-very-popular-topic-50.png"
                   alt="">
-                <p>{{post.popularity}}</p>
+                <p [ngClass]="selectedSortBy.toLowerCase() == 'popularity' ? 'underline-text' : ''">{{post.popularity}}</p>
               </div>
             </div>
           </div>
