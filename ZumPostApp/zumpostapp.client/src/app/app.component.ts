@@ -3,31 +3,33 @@ import { Component, OnInit } from '@angular/core';
 import { ApiService } from './api.service';
 import { Post } from './post';
 
-interface WeatherForecast {
-  date: string;
-  temperatureC: number;
-  temperatureF: number;
-  summary: string;
-}
-
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
 
 export class AppComponent implements OnInit {
-  public forecasts: WeatherForecast[] = [];
   public posts: Post[] = [];
+
+  selectedTag: string = 'Tech';
+  tagOptions: string[] = ['Tech', 'Design', 'Culture', 'Science'];
+
+  selectedSortBy: string = 'Id';
+  sortByOptions: string[] = ['Id', 'Reads', 'Likes', 'Popularity'];
+  
+  selectedDirection: string = 'Asc';
+  directionOptions: string[] = ['Asc', 'Desc'];
 
   constructor(private http: HttpClient, private apiService: ApiService) {}
 
   ngOnInit() {
-    //this.getForecasts();
     this.getPost('tech');
   }
 
+  handleFormData():void{
+    console.log('selectedSortBy', this.selectedSortBy)
+  }
 
   getPost(tag: string, sortBy?: string, direction?: string): void {
     this.apiService.getPosts(tag, sortBy, direction).subscribe(
